@@ -6,9 +6,6 @@ function sendnotif(msg)
       })
 end
 
-local StagePosition = -76.806, 57.6, -214.826
-local DJPosition = -90.536, 59.07, -215.866
-
 local Player = game.Players.LocalPlayer
 local Character = Player.Character
 
@@ -18,7 +15,7 @@ Player.Chatted:Connect(function(msg)
     
     if lower == "#stage" then
       local Root = Character:FindFirstChild("HumanoidRootPart")
-      Root.CFrame = CFrame.new(Vector3.new(StagePosition))
+      Root.CFrame = CFrame.new(Vector3.new(-76.806, 57.6, -214.826))
       task.wait(0.1)
       sendnotif("Moved you to the stage.")
    end
@@ -30,7 +27,7 @@ Player.Chatted:Connect(function(msg)
     
     if lower == "#dj" then
       local Root = Character:FindFirstChild("HumanoidRootPart")
-      Root.CFrame = CFrame.new(Vector3.new(DJPosition))
+      Root.CFrame = CFrame.new(Vector3.new(-90.536, 59.07, -215.866))
       task.wait(0.1)
       sendnotif("Moved you to the DJ.")
    end
