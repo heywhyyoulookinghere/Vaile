@@ -1,5 +1,3 @@
-local prefix = "#"
-
 function sendnotif(msg)
   game.StarterGUI:SetCore("SendNotification", {
     Title = "Vaile";
@@ -18,18 +16,7 @@ Player.Chatted:Connect(function(msg)
     local split = string.split(msg," ")
     local lower = string.lower(split[1])
     
-    if lower == prefix.."prefix" then
-      prefix = split[2]
-      task.wait(0.1)
-      sendnotif("Prefix has been changed to "..split[2]..".")
-   end
-end)
-
-Player.Chatted:Connect(function(msg)
-    local split = string.split(msg," ")
-    local lower = string.lower(split[1])
-    
-    if lower == prefix.."stage" then
+    if lower == "#stage" then
       local Root = Character:FindFirstChild("HumanoidRootPart")
       Root.CFrame = CFrame.new(Vector3.new(StagePosition))
       task.wait(0.1)
@@ -41,7 +28,7 @@ Player.Chatted:Connect(function(msg)
     local split = string.split(msg," ")
     local lower = string.lower(split[1])
     
-    if lower == prefix.."dj" then
+    if lower == "#dj" then
       local Root = Character:FindFirstChild("HumanoidRootPart")
       Root.CFrame = CFrame.new(Vector3.new(DJPosition))
       task.wait(0.1)
@@ -54,7 +41,7 @@ Player.Chatted:Connect(function(msg)
     local split = string.split(msg," ")
     local lower = string.lower(split[1])
     
-    if lower == prefix.."spamvote" then
+    if lower == "#spamvote" then
     if game.Workspace.RapBattles.Rappers.player1.Value or game.Workspace.RapBattles.Rappers.player2.Value == split[2] then
       if game.Workspace.RapBattles.Rappers.player1.Value == split[2] then
          for i = 0,1 do 
@@ -78,10 +65,9 @@ end)
 Player.Chatted:Connect(function(msg)
    local lower = string.lower(msg)
       
-   if lower == prefix.."cmds" then
+   if lower == "#cmds" then
       print("Vaile")
       print(".....")
-      print("prefix -- changes the prefix.")
       print("dj -- teleports you to booth.")
       print("stage -- teleports you to the stage.")
       print("spamvote -- spams the vote of someone on stage. (use when the voting menu comes up)")
