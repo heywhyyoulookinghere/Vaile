@@ -89,3 +89,6 @@ Player.Chatted:Connect(function(msg)
       sendnotif("Please check the console for commands with /console.")
    end
 end)
+
+  
+sendnotif("Vaile successfully loaded.")
