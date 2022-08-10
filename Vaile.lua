@@ -1,9 +1,9 @@
 function sendnotif(msg)
-  game.StarterGUI:SetCore("SendNotification", {
-    Title = "Vaile";
-    Text = msg;
-    Duration = 1;
-    })
+  game.StarterGui:SetCore("SendNotification", {
+      Title = "Vaile";
+      Text = msg;
+      Duration = 1;
+      })
 end
 
 local StagePosition = -76.806, 57.6, -214.826
