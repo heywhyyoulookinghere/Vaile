@@ -6,10 +6,10 @@ local function sendnotif(msg)
       })
 end
 
-local Player = game.Players.LocalPlayer
+
 local Character = Player.Character
 
-Player.Chatted:Connect(function(msg)
+game.Players.LocalPlayer.Chatted:Connect(function(msg)
     local split = string.split(msg," ")
     local lower = string.lower(split[1])
     
@@ -21,7 +21,7 @@ Player.Chatted:Connect(function(msg)
    end
 end)
 
-Player.Chatted:Connect(function(msg)
+game.Players.LocalPlayer.Chatted:Connect(function(msg)
     local split = string.split(msg," ")
     local lower = string.lower(split[1])
     
@@ -34,7 +34,7 @@ Player.Chatted:Connect(function(msg)
 end)
 
 
-Player.Chatted:Connect(function(msg)
+game.Players.LocalPlayers.Chatted:Connect(function(msg)
     local split = string.split(msg," ")
     local lower = string.lower(split[1])
     
@@ -59,7 +59,7 @@ Player.Chatted:Connect(function(msg)
    end
 end)
   
-Player.Chatted:Connect(function(msg)
+game.Players.LocalPlayer.Chatted:Connect(function(msg)
    local lower = string.lower(msg)
       
    if lower == "#cmds" then
