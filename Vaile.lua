@@ -6,10 +6,8 @@ local function sendnotif(msg)
       })
 end
 
-
-local Character = Player.Character
-
 game.Players.LocalPlayer.Chatted:Connect(function(msg)
+    local Character = game.Players.LocalPlayer.Character
     local split = string.split(msg," ")
     local lower = string.lower(split[1])
     
@@ -22,6 +20,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
 end)
 
 game.Players.LocalPlayer.Chatted:Connect(function(msg)
+    local Character = game.Players.LocalPlayer.Character
     local split = string.split(msg," ")
     local lower = string.lower(split[1])
     
