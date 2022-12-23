@@ -25,20 +25,20 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
 end)
 
 
-game.Players.LocalPlayers.Chatted:Connect(function(msg)
+game.Players.LocalPlayer.Chatted:Connect(function(msg)
     local split = string.split(msg," ")
     local lower = string.lower(split[1])
     
     if lower == "#spamvote" then
     if game.Workspace.RapBattles.Rappers.player1.Value or game.Workspace.RapBattles.Rappers.player2.Value == split[2] then
       if game.Workspace.RapBattles.Rappers.player1.Value == split[2] then
-         for i = 0,1 do 
+         for i = 10,100 do 
              game.Workspace.Votes:FireServer(false,"p1")
              game:GetService("RunService").Heartbeat:Wait()
          end
       end
       if game.Workspace.RapBattles.Rappers.player2.Value == split[2] then
-          for i = 0,1 do
+          for i = 10,100 do
             game.Workspace.Votes:FireServer(false,"p2")
             game:GetService("RunService").Heartbeat:Wait()
          end
@@ -48,6 +48,7 @@ game.Players.LocalPlayers.Chatted:Connect(function(msg)
    else
       sendnotif(split[2].." isn't on stage.")
    end
+end
 end)
   
 game.Players.LocalPlayer.Chatted:Connect(function(msg)
