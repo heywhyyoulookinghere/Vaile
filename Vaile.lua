@@ -1,4 +1,4 @@
-local function sendnotif(msg)
+function sendnotif(msg)
   game.StarterGui:SetCore("SendNotification", {
       Title = "Vaile";
       Text = msg;
