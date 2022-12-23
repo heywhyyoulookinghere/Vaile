@@ -1,11 +1,3 @@
-function sendnotif(msg)
-  game.StarterGui:SetCore("SendNotification", {
-      Title = "Vaile";
-      Text = msg;
-      Duration = 1;
-      })
-end
-
 game.Players.LocalPlayer.Chatted:Connect(function(msg)
     local Character = game.Players.LocalPlayer.Character
     local split = string.split(msg," ")
@@ -72,5 +64,12 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
    end
 end)
 
+function sendnotif(msg)
+  game.StarterGui:SetCore("SendNotification", {
+      Title = "Vaile";
+      Text = msg;
+      Duration = 1;
+      })
+end
   
 sendnotif("Vaile successfully loaded.")
